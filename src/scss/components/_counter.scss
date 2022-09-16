@@ -1,5 +1,5 @@
 .block-2 {
-  grid-column: span 4;
+  grid-column: 3 / span 3;
 }
 
 .counter {
@@ -19,7 +19,6 @@
     @include flex-all-sb;
 
     flex-direction: row;
-    gap: 1em;
   }
 }
 
