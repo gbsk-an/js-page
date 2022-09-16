@@ -1,0 +1,18 @@
+.footer {
+  width: 100%;
+  background-color: $grey;
+
+  @include flex-all-sb;
+  flex-direction: column;
+
+  &__links {
+    margin-top: 1.6em;
+    margin-bottom: 1em;
+    &--item:not(:last-child) {
+      margin-right: 2em;
+    }
+  }
+  &__copyright {
+    margin-bottom: 2em;
+  }
+}

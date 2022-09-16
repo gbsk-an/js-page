@@ -1,8 +1,12 @@
+// basic components
 @import "vars";
 @import "mixins";
 @import "fonts";
 @import "settings";
 
+// page components
 @import "./components/head";
-@import "./components/header";
+@import "./components/body";
+@import "./components/button";
+@import "./components/counter";
 @import "./components/footer";

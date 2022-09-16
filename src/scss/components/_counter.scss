@@ -1,0 +1,60 @@
+.block-2 {
+  grid-column: span 4;
+}
+
+.counter {
+  padding: 2em;
+  background-color: $purple-light;
+  border-radius: 10px;
+  text-align: center;
+
+  &__text {
+    margin-bottom: 1em;
+    &--title {
+      margin-bottom: .8em;
+    }
+  }
+
+  &__btn {
+    @include flex-all-sb;
+
+    flex-direction: row;
+    gap: 1em;
+  }
+}
+
+.minusBtn,
+.plusBtn {
+  position: relative;
+  padding: 1.4em;
+  background-color: $deep-blue;
+  border-radius: 10px;
+  border: 1px solid $medium-blue;
+  box-shadow: $shadow;
+  color: $white;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: lowercase;
+}
+.minusBtn::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-image: url("../img/svg/minus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 50%;
+  left: 33%;
+}
+.plusBtn::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/svg/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 35%;
+  left: 35%;
+}
