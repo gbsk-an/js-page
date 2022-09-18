@@ -84,3 +84,10 @@ $browser-context: 16; // Default
     content: "";
     display: block;
 }
+
+@mixin btn {
+  background-color: $deep-blue;
+  border-radius: 10px;
+  border: 1px solid $medium-blue;
+  color: $white;
+}

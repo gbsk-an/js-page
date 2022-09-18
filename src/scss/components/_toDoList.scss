@@ -1,0 +1,48 @@
+.block-5 {
+  grid-column: 1 / span 5;
+}
+
+.todo {
+  &__title {
+    margin-bottom: 1em;
+  }
+  &__form {
+    margin: 2em 0 1.5em;
+  }
+  &__input {
+    display: block;
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    padding: 1em;
+    background-color: $white;
+    border-radius: 10px;
+    border: 1px solid $deep-blue;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: #060714;
+    text-transform: capitalize;
+  }
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  &__button {
+
+    &--add {
+      @include btn;
+      margin-left: -1px;
+      padding: 1em;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    &--clear{
+      @include btn;
+      width: 5em;
+      height: 3em;
+      text-transform: lowercase;
+      letter-spacing: 3px;
+    }
+  }
+}

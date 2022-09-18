@@ -1,0 +1,11 @@
+.block-4 {
+  grid-column: 9 / span 3;
+}
+
+.time {
+  padding: 1em;
+  background-color: $deep-blue;
+  border-radius: 10px;
+  border: 1px solid $medium-blue;
+  box-shadow: $shadow;
+}
