@@ -1,7 +1,6 @@
-const form = document.querySelector('#itemForm'); // select form
-const itemInput = document.querySelector('#itemInput'); // select input box from form
-const itemList = document.querySelector('.item-list');
-const feedback = document.querySelector('.feedback');
+const form = document.querySelector('#itemForm');
+const itemInput = document.querySelector('#itemInput');
+const itemList = document.querySelector('.todo__item-list');
 const clearButton = document.querySelector('#clear-list');
 
 let todoItems = [];
@@ -13,12 +12,11 @@ const handleItem = function(itemName){
     items.forEach(function(item){
 
         if(item.querySelector('.item-name').textContent === itemName){
-            //complete event listener
             item.querySelector('.complete-item').addEventListener('click', function(){
                 item.querySelector('.item-name').classList.toggle('completed');
                 this.classList.toggle('visibility');
+
             });
-            //edit event listener
             item.querySelector('.edit-item').addEventListener('click', function(){
                 itemInput.value = itemName;
                 itemList.removeChild(item);
@@ -27,7 +25,7 @@ const handleItem = function(itemName){
                     return item !== itemName;
                 });
             });
-            // delete event listener
+
             item.querySelector('.delete-item').addEventListener('click', function(){
                 debugger;
                 itemList.removeChild(item);
@@ -53,7 +51,7 @@ const getList = function(todoItems){
     itemList.innerHTML = '';
 
         todoItems.forEach(function(item){
-            itemList.insertAdjacentHTML('beforeend', `<div class="item my-3"><h5 class="item-name text-capitalize">${item}</h5><div class="item-icons"><a href="#" class="complete-item mx-2 item-icon"><i class="far fa-check-circle"></i></a><a href="#" class="edit-item mx-2 item-icon"><i class="far fa-edit"></i></a><a href="#" class="delete-item item-icon"><i class="far fa-times-circle"></i></a></div></div>` );
+            itemList.insertAdjacentHTML('beforeend', `<div class="item"><h5 class="item-name">${item}</h5><div class="item-icons"><a href="#" class="complete-item item-icon"><img src="../img/svg/done.svg" class="" alt="complete"></a><a href="#" class="edit-item item-icon"><img src="../img/svg/edit.svg" class="" alt="edit"></a><a href="#" class="delete-item item-icon"><img src="../img/svg/delete.svg" class="" alt="delete"></a></div></div>` );
 
             handleItem(item);
         });
@@ -74,10 +72,8 @@ const setLocalStorage = function(todoItems){
     localStorage.setItem('todoItems', JSON.stringify(todoItems));
 }
 
-// get local storage from page
 getLocalStorage();
 
-//add an item to the List, including to local storage
 form.addEventListener('submit', function(e){
     e.preventDefault();
     const itemName = itemInput.value;
@@ -93,15 +89,12 @@ form.addEventListener('submit', function(e){
         todoItems.push(itemName);
         setLocalStorage(todoItems);
         getList(todoItems);
-        //add event listeners to icons;
-        //handleItem(itemName);
     }
 
     itemInput.value = '';
 
     });
 
-    //clear all items from the list
 clearButton.addEventListener('click', function(){
     todoItems = [];
     localStorage.clear();

@@ -46,3 +46,22 @@
     }
   }
 }
+
+.item {
+  display: flex;
+  justify-content: space-between;
+
+  &-name {
+    margin-bottom: 2em;
+  }
+  &-icon {
+
+    &:not(:last-child) {
+      margin-right: 1em;
+    }
+  }
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}

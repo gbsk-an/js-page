@@ -1,51 +1,83 @@
 <div class="wrapper">
   <div class="block-1">
-      <button id="buttonClick" type="button" class="btn__click" value="Click">Click on me</button>
-  </div>
-  <div class="block-2">
-      <div class="counter">
-          <div class="counter__text">
-              <h2 class="container__text--title">counter</h2>
-              <h3 id="counter">0</h3>
-          </div>
-          <div class="counter__btn">
-              <button type="button" class="minusBtn counterBtn btn" value="minus"></button>
-              <button type="button" class="plusBtn counterBtn btn" value="plus"></button>
-          </div>
-      </div>
-  </div>
-  <div class="block-3">
-    <div class="swiper swiperImages">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img loading="lazy" src="./img/picture_01.png" role="img" alt="spaceship"></div>
-        <div class="swiper-slide"><img loading="lazy" src="./img/picture_02.png" role="img" alt="spaceship"></div>
-      </div>
-      <div class="swiper-scrollbar"></div>
-    </div>
-  </div>
-  <div class="block-4">
     <div class="time">
       <h3>Local time:</h3>
       <h1 id="localTime"></h1>
     </div>
   </div>
+  <div class="block-2">
+    <div class="counter">
+      <div class="counter__text">
+        <h2 class="container__text--title">counter</h2>
+        <h3 id="counter">0</h3>
+      </div>
+      <div class="counter__btn">
+        <button
+          type="button"
+          class="minusBtn counterBtn btn"
+          value="minus"
+        ></button>
+        <button
+          type="button"
+          class="plusBtn counterBtn btn"
+          value="plus"
+        ></button>
+      </div>
+    </div>
+  </div>
+  <div class="block-3">
+    <div class="swiper swiperImages">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            loading="lazy"
+            src="./img/picture_01.png"
+            role="img"
+            alt="spaceship"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            loading="lazy"
+            src="./img/picture_02.png"
+            role="img"
+            alt="spaceship"
+          />
+        </div>
+      </div>
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
+  <div class="block-4">
+    <button id="buttonClick" type="button" class="btn__click" value="Click">
+      Click on me
+    </button>
+  </div>
   <div class="block-5">
     <div class="container todo">
-      <div class="alert feedback">
-        <p>write value for item</p>
-      </div>
       <form id="itemForm" class="todo__form">
         <h3 class="todo__title">to do list</h3>
         <div class="todo__flex">
-          <input type="text" class="todo__input" id="itemInput" placeholder="name...">
-          <button class="todo__button--add btn-reset" type="submit">add item</button>
+          <input
+            type="text"
+            class="todo__input"
+            id="itemInput"
+            placeholder="task"
+          />
+          <button class="todo__button--add btn-reset" type="submit">
+            add item
+          </button>
         </div>
-       </form>
-       <div class="">
-        <div class="item-list">
-
-        </div>
-        <button type="button" class="todo__button--clear btn-reset" id="clear-list">clear items</button>
+      </form>
+      <div class="todo__item-container">
+        <div class="todo__item-list"></div>
+        <button
+          type="button"
+          class="todo__button--clear btn-reset"
+          id="clear-list"
+        >
+          clear items
+        </button>
       </div>
     </div>
   </div>
