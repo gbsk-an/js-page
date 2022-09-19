@@ -51,7 +51,7 @@ const getList = function(todoItems){
     itemList.innerHTML = '';
 
         todoItems.forEach(function(item){
-            itemList.insertAdjacentHTML('beforeend', `<div class="item"><h5 class="item-name">${item}</h5><div class="item-icons"><a href="#" class="complete-item item-icon"><img src="../img/svg/done.svg" class="" alt="complete"></a><a href="#" class="edit-item item-icon"><img src="../img/svg/edit.svg" class="" alt="edit"></a><a href="#" class="delete-item item-icon"><img src="../img/svg/delete.svg" class="" alt="delete"></a></div></div>` );
+            itemList.insertAdjacentHTML('beforeend', `<div class="item"><h5 class="item-name">${item}</h5><div class="item-icons"><a href="#" class="complete-item item-icon"><img src="./img/svg/done.svg" class="" alt="complete"></a><a href="#" class="edit-item item-icon"><img src="./img/svg/edit.svg" class="" alt="edit"></a><a href="#" class="delete-item item-icon"><img src="./img/svg/delete.svg" class="" alt="delete"></a></div></div>` );
 
             handleItem(item);
         });
