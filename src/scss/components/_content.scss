@@ -2,23 +2,33 @@
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
     "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  background-image: url("../img/background_01.png");
+    background-color: $grey;
 }
 
 .main {
-  padding: 5em 10em 8em;
+  background-image: url("../img/background_01.png");
 }
 
 .wrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 0 32px;
+  gap: 1em 2em;
   max-width: 1200px;
   margin: 0 auto;
+  @include mobile {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1em 1em;
+    max-width: 400px
+  }
 }
 
 .container {
   padding: 2em;
   background-color: $purple-light;
   border-radius: 10px;
+}
+
+
+.ptb-5 {
+  padding: 5em 0;
 }

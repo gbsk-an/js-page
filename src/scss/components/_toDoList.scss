@@ -1,5 +1,8 @@
 .block-5 {
   grid-column: 1 / span 5;
+  @include mobile {
+    grid-column: span 6;
+  }
 }
 
 .todo {

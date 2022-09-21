@@ -1,5 +1,8 @@
 .block-2 {
   grid-column: 4 / span 3;
+  @include mobile {
+    grid-column: span 6;
+  }
 }
 
 .counter {

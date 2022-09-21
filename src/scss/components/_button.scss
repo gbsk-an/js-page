@@ -1,5 +1,9 @@
 .block-4 {
   grid-column: 10 / span 3;
+  @include mobile {
+    grid-column: span 6;
+    text-align: center;
+  }
 }
 
 .btn__click {

@@ -1,0 +1,30 @@
+.block-6 {
+  grid-column: 6 / span 4;
+
+  @include mobile {
+    grid-column: span 6;
+  }
+}
+
+.quote {
+  @include flex-all-center;
+  flex-wrap: wrap;
+  gap: .8em;
+  padding: 2em;
+  background-color: $purple-light;
+  border-radius: 10px;
+
+  &__btn {
+    @include btn;
+
+    padding: .8em;
+    box-shadow: $shadow;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: lowercase;
+  }
+
+  &__text {
+    text-align: justify;
+  }
+}

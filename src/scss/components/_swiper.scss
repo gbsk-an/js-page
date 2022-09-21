@@ -5,6 +5,9 @@
   border: 1px solid $medium-blue;
   box-shadow: $shadow;
   overflow: hidden;
+  @include mobile {
+    grid-column: span 6;
+  }
 }
 .swiper-slide {
   text-align: center;
